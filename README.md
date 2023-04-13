@@ -22,7 +22,7 @@ Overall, we were able to create many different models to determine which model i
 
 ## References:
 1. https://analyticsindiamag.com/7-types-classification-algorithms/
-2. https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74 /n
+2. https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74
 3. https://scikit-learn.org/stable/user_guide.html
 4. https://en.wikipedia.org/wiki/Receiver_operating_characteristic
 
