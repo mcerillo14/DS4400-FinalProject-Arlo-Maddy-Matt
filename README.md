@@ -5,7 +5,7 @@ This repository contains code, data, and step by step directions on how to imple
 
 
 ## Introduction:
-The main reason for our project was to try and be able to predict whether a customer will make a purchase when they enter a website. Many people have turned to online shopping instead of going in person due to covid concerns, accesibility, and the increased efficientcy of online vendors. As a result, many compnaies have focused on their online business instead of in person market. So, being able to look at what factors contribute to a customer making a purchase online can be very important to these companies who are trying to succeed in the online market. 
+The main reason for our project was to try and be able to predict whether a customer will make a purchase when they enter a website. Many people have turned to online shopping instead of going in person due to covid concerns, accesibility, and the increased efficiency of online vendors. As a result, many compnaies have focused on their online business instead of in person market. So, being able to look at what factors contribute to a customer making a purchase online can be very important to these companies who are trying to succeed in the online market. 
 
 For our approach, we wanted to take a look at a variety of different models to make sure we are getting the best representation of the data. Since we do not if our data is linear or non-linear, this approach allows to find out what type our data is based on which model works the best. Once we created our models, our next step was to look at the initial accuracy score for each and then change the hyperparameters for the models to try and get the best accuracy score.
 
