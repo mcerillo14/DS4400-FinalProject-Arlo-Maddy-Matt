@@ -21,5 +21,7 @@ We can make some conclusions and next steps after looking at our initial discove
 Overall, we were able to create many different models to determine which model is most accurate when working with our data. This allows us to pick a model to use going forward to be able to make accurate predictions for what types of factors influence a customers purchases online. 
 
 ## References:
-
+https://analyticsindiamag.com/7-types-classification-algorithms/
+https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74
+https://scikit-learn.org/stable/user_guide.html
 
