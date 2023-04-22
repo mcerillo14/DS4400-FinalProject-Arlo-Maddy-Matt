@@ -16,7 +16,7 @@ Precision, in our use case, will be the number of predicted purchase visits that
 ## Setup: 
 Our dataset consists of 12,331 rows, each representing a visit to a website. After data cleaning, our dataset consisted of 11,958 visits. Out of those visits, 1,863 of them were recorded as visits ending in a purchase. This means our data follows an approximate 85 / 15 split of non-purchases to purchases. The models we are planning to use include Decision Trees, Random Forests, Logistic Regression, KNN, Naive Bayes, Stochastic Gradient Descent, and Support Vector Classification. We plan to use GridSearchCV to adjust our hyperparameters according to paramaters that perform best on training data. 
 
-# NEURAL NETWORKS HERE PLEASE
+### NEURAL NETWORKS HERE PLEASE
 
 ## Results:
 TBD
