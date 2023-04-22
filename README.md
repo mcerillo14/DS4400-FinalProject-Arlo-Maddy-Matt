@@ -25,4 +25,5 @@ Overall, we were able to create many different models to determine which model i
 2. https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74
 3. https://scikit-learn.org/stable/user_guide.html
 4. https://en.wikipedia.org/wiki/Receiver_operating_characteristic
+5. https://towardsdatascience.com/the-5-classification-evaluation-metrics-you-must-know-aa97784ff226
 
