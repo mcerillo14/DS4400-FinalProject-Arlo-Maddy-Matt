@@ -30,24 +30,24 @@ Due to the nature of our testing data, with under 400 visits in the testing port
 
 | Model | F1 Score | Recall Score |
 | :----------- | -----------: | ------------: |
-| Decision Tree | .68 - .72 | .55 - .65 |
-| Random Forest Classifier | .70 - .74 | .55 - .65 |
-| Logistic Regression | .65 - .69 | .45 - .55 |
-| KNN | .53 - .57 | .35 - .45 |
-| Naive Bayes | .44 - .48 | .45 - .55 |
-| Stochastic Gradient Descent | .77 - .81 | .25 - .35 |
-| Support Vector Classification | .95 - 1.0 | .10 - .20 |
+| Decision Tree | .64 - .68 | .56 - .66 |
+| Random Forest Classifier | .50 - .54 | .38 - .48 |
+| Logistic Regression | .47 - .51 | .33 - .43 |
+| KNN | .39 - .43 | .25 - .35 |
+| Naive Bayes | .49 - .53 | .45 - .55 |
+| Stochastic Gradient Descent | .37 - .41 | .25 - .35 |
+| Support Vector Classification | .02 - .06 | .01 - .10 |
 
-It is crucial to understand the context of how we are evaluating what a succesful model is to understand which models are effective, and which are not. Despite having two of the highest F1 scores consistently, both Stochastic Gradient Descent and Support Vector models are almost entirely useless for our purposes. The reason they score so highly in F1 is due to their almost perfect precision scores. These models almost never predict purchases, and as a result, see their precision scores skyrocket. We assume this is due to the models only predicting purchases in the most extreme and obvious cases. These models offer us little to no additional insight, and miss the vast majority of purchases in the dataset. This is an example that reinforces why it is so crucial to use recall scoring in our project, with merely F1 score alone we could fairly reasonably conclude that our worst models for our purposes are actually, our best ones. 
+It is crucial to understand the context of how we are evaluating what a succesful model is to understand which models are effective, and which are not. For example, our Stochastic Gradient Descent model occassionaly had recall scores of over .9, which would be the highest scores by far out of any of our models. However, this is due to the model switching to predict almost all visits as purchases, which is equally as useless as predicting almost all visits as non-purchases. Due to its dramatic fluctuations, it is unreliable. Support Vector models also almost exclusively predict non-purchases, which renders those models as useless as the Stochastic Gradient Descent ones. These models offer us little to no additional insight, and miss the vast majority of purchases in the dataset. This is an example that reinforces why it is so crucial to use recall scoring in our project, with merely F1 score alone we could fairly reasonably conclude that our worst models for our purposes are actually, our best ones. 
 
-The middle tier of model succes include Naive Bayes, KNN, and Logistic Regression models. These models have some of the most irregular and inconsistent scores, but tend to cluster around the reported values in the table. Due to their incosistency, these models should not be relied upon. Occasionally, however, Naive Bayes and Logistic Regression modes have reported F1 scores over .8, and recall scores over .7, which are some of our most succesful models. 
+The middle tier of model succes include KNN and Logistic Regression models. These models have some of the most irregular and inconsistent scores, but tend to cluster around the reported values in the table. Due to their incosistency, these models should not be relied upon. 
 
-Our most reliable models are the tree-based methods, Decision Trees and Random Forests. As to be expected, our Random Forests outperform our Decision Tree models, but not signifcantly. Both tree-based models have F1 scores around .7, with recall scores centering around .62 or .63. We used GridSearchCV to find the best set of hyperparamters, but often the inputted hyperparameters made little to no improvement on the model, and even in some cases early in our scoring and evaluation process, actually made the models perform worse. 
+Our most reliable models are the tree-based methods, Decision Trees and Random Forests. Surprisingly, our Random Forests outperformed by our Decision Tree models, but not signifcantly. Decision trees score slightly higher on F1 by 10% or so, and the average difference in recall score is almost twice that. We used GridSearchCV to find the best set of hyperparamters, but often the inputted hyperparameters made little to no improvement on the model, and even in some cases early in our scoring and evaluation process, actually made the models perform worse. Naive Bayes models were suprisingly effective relative to our other models, consistently scoring around .5 in F1 scores and recall scores.
 
 #### Supplementary Results:
 We hypothesized that the nature of our models' scoring was due to the extreme imbalance in the data itself. With approximately 85% of data being in a non-purchase, we wondered if our models would perform better with a more evenly distributed dataset to train on. We took all the purchases, and then randomly selected an equal number of non-purchase visits to create a new dataset, that was exactly half purchases, and half non-purchases to train our models on. We found the new dataset to be inconclusive in changing the models' performance in any notable way. Scores fell into the same ranges, and were neither more or less consistent. 
 
-We used GridSearchCV to make our hyperparameter choices. Due to the nature of the dataset and its imbalanced distribution, we believed the best course of action would be to choose appropriate model parameters based on performance on training data. 
+We used GridSearchCV to make our hyperparameter choices. Due to the nature of the dataset and its imbalanced distribution, we believed the best course of action would be to choose appropriate model parameters based on performance on training data. To see confusion matrices, either adjust the code in the "ds44_final.ipnyb" file by assigning heatmap = True in the function paramters, or view the output of "confusion_matrix.ipnyb" which is a streamlined version of the code meant to show our visualizations and scoring strategies.
 
 ## Discussion:
 Accurately predicting consumer behavior, especially online, is no small task. That being said, we expected our models to perform better than they did. The nature of the dataset has been discussed at length, but we believe that one of the main takeaways from our work is that there might merely be no significant correlation between the behavior and purchases. Our dataset comes from one website, in one year, and is no way representative of larger consumer behaviors in other industries, or other time periods, but it does bring up interesting theories about the nature of the task. As we found in our preliminary data exploration, almost all of the data had very little correlation with purchasing factors. 
