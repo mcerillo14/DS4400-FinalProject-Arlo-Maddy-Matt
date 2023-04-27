@@ -31,7 +31,7 @@ Due to the nature of our testing data, with under 400 visits in the testing port
 | KNN | .53 - .57 | .35 - .45 |
 | Naive Bayes | .44 - .48 | .45 - .55 |
 | Stochastic Gradient Descent | .77 - .81 | .25 - .35 |
-| Support Vector Classification | .95 - 1.0 | .1 - 2 |
+| Support Vector Classification | .95 - 1.0 | .10 - .20 |
 
 It is crucial to understand the context of how we are evaluating what a succesful model is to understand which models are effective, and which are not. Despite having two of the highest F1 scores consistently, both Stochastic Gradient Descent and Support Vector models are almost entirely useless for our purposes. The reason they score so highly in F1 is due to their almost perfect precision scores. These models almost never predict purchases, and as a result, see their precision scores skyrocket. We assume this is due to the models only predicting purchases in the most extreme and obvious cases. These models offer us little to no additional insight, and miss the vast majority of purchases in the dataset. This is an example that reinforces why it is so crucial to use recall scoring in our project, with merely F1 score alone we could fairly reasonably conclude that our worst models for our purposes are actually, our best ones. 
 
